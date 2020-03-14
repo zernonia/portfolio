@@ -1,0 +1,7 @@
+{
+  "date": "2020-03-14T17:08:07.602Z",
+  "title": "Finally! Hello World!",
+  "thumbnail": "/img/whatsapp-image-2019-03-16-at-12.53.14-pm.jpeg",
+  "description": "Hello World! Please dont have anymore problem",
+  "body": "Hihi. I thought rich text style need not to use install Markdown plugin, but in fact we need to.\n\nFrom `Json` format to `.md ` required the plugin. So, I have no choice!!\n\n\n\n```\nexport const state = () => ({\n  blogPosts: [],\n});\n\nexport const mutations = {\n  setBlogPosts(state, list) {\n    state.blogPosts = list;\n  },\n};\n\nexport const actions = {\n  async nuxtServerInit({ commit }) {\n    let files = await require.context('~/assets/content/blog/', false, /\\.json$/);\n    let blogPosts = files.keys().map(key => {\n      let res = files(key);\n      res.slug = key.slice(2, -5);\n      return res;\n    });\n    await commit('setBlogPosts', blogPosts);\n  },\n};\n```"
+}
