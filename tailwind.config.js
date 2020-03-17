@@ -13,6 +13,10 @@ module.exports = {
       'borderRadius': {
         'xl' : '1rem',
         '2xl' : '1.5rem'
+      },
+      spacing: {
+        '72' : '18rem',
+        '80' : '20rem'
       }
     }
   },
